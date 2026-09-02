@@ -312,6 +312,23 @@
     color: #d4af37;
 }
 
+.hair-condition-image {
+    width: 100%;
+    height: 230px;
+    margin-bottom: 22px;
+    overflow: hidden;
+    background: #eeeeee;
+    border-radius: 16px;
+}
+
+.hair-condition-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .gallery-page-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -344,6 +361,14 @@
     color: #d4af37;
 
     font-weight: 700;
+}
+
+    .gallery-page-card > .gallery-placeholder img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
 }
 
 .gallery-page-card h3 {
@@ -390,6 +415,17 @@
     object-fit: contain;
 }
 
+.gallery-page-card.result-gallery-card > .gallery-result-image {
+    height: 280px;
+    overflow: hidden;
+}
+
+.gallery-page-card.result-gallery-card > .gallery-result-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 
 /* Very important:
    stop the old > div flex rule
