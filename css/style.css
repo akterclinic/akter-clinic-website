@@ -923,6 +923,15 @@ textarea:focus-visible {
     gap: 27px;
 }
 
+.reviews-grid:has(> .review-card:only-child) {
+    display: flex;
+    justify-content: center;
+}
+
+.reviews-grid > .review-card:only-child {
+    width: min(100%, 650px);
+}
+
 .review-card {
     display: flex;
     min-height: 340px;
@@ -2286,4 +2295,70 @@ textarea:focus-visible {
         height: 360px;
     }
 
+}
+
+/* Homepage gallery card alignment */
+
+.gallery-grid .gallery-image {
+    width: 100%;
+    height: 290px;
+    overflow: hidden;
+}
+
+.gallery-grid .gallery-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Keep the complete before-and-after image visible */
+
+.gallery-grid .real-result-image {
+    height: 290px;
+    background: #ffffff;
+}
+
+.gallery-grid .real-result-image img {
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Fill the result frame without cropping the original image */
+
+.gallery-grid .real-result-image {
+    position: relative;
+    isolation: isolate;
+    background: #f3f0e9;
+}
+
+.gallery-grid .real-result-image::before {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    z-index: 0;
+
+    background-image: url("../images/hair-restoration-before-after.webp");
+    background-position: center;
+    background-size: cover;
+
+    filter: blur(18px);
+    opacity: 0.22;
+    transform: scale(1.08);
+}
+
+.gallery-grid .real-result-image img {
+    position: relative;
+    z-index: 1;
+    object-fit: contain;
+}
+
+/* Mobile image height */
+
+@media (max-width: 600px) {
+    .gallery-grid .gallery-image,
+    .gallery-grid .real-result-image {
+        height: 240px;
+    }
 }
