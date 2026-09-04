@@ -587,8 +587,10 @@
 
 .google-form-wrapper iframe {
     width: 100%;
-    min-height: 2234px;
+    height: 1080px;
+    min-height: 1300px;
     display: block;
+    background: #f8f5ef;
     border: 0;
 }
 
@@ -666,7 +668,8 @@
     }
 
     .google-form-wrapper iframe {
-        min-height: 2450px;
+        height: 1180px;
+        min-height: 1000px;
     }
 
     .map-page-wrapper iframe {
