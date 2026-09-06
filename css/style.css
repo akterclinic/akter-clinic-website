@@ -2401,3 +2401,55 @@ textarea:focus-visible {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================
+   SOCIAL MEDIA ICON BUTTONS
+========================= */
+
+.social-links-grid {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #181818;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: var(--gold);
+    transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.social-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.social-btn:hover {
+    background: var(--gold);
+    color: #111111;
+    border-color: var(--gold);
+    transform: translateY(-2px);
+}
+
+/* Light background variant for the Contact Page Card */
+.contact-card .social-btn,
+.contact-page-card .social-btn {
+    background: #f8f5ef;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    color: #8f6e1f;
+}
+
+.contact-card .social-btn:hover,
+.contact-page-card .social-btn:hover {
+    background: var(--gold);
+    color: #111111;
+    border-color: var(--gold);
+}
